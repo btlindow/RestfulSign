@@ -1,5 +1,6 @@
 package com.example.blindow.nathansboard;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
         Button pushBtn = findViewById(R.id.pushBtn);
         final EditText messageET = findViewById(R.id.messageET);
         final TextView ackTV = findViewById(R.id.ackTV);
+
+        Button switchbutton = findViewById(R.id.switch_activity);
+        switchbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Splash_activity.class);
+                intent.putExtra("password","hello");
+                startActivity(intent);
+            }
+        });
 
         pushBtn.setOnClickListener(new View.OnClickListener() {
             @Override
