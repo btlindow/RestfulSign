@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void postMessage(final String message) {
-        String url = "ENTER_URL_HERE";
+        String url = "http://10.202.10.136";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
-                params.put("message", message);
+                params.put("bulls", message);
                 return params;
             }
         };
