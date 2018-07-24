@@ -29,6 +29,16 @@ public class MainActivity extends AppCompatActivity {
         final EditText messageET = findViewById(R.id.messageET);
         final TextView ackTV = findViewById(R.id.ackTV);
 
+        Button switchbutton = findViewById(R.id.switch_activity);
+        switchbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Splash_activity.class);
+                intent.putExtra("password","hello");
+                startActivity(intent);
+            }
+        });
+
         pushBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
